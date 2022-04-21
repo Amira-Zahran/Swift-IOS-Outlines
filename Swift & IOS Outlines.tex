@@ -1,0 +1,367 @@
+\documentclass[14pt]{extarticle} 
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+%\usepackage{listings}
+%\lstinputlisting[language=python]{mypythonfile.py}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[normalem]{ulem}
+\usepackage[]{natbib}
+\usepackage{titlepic}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+
+
+\pagestyle{headings}
+\title{Swift \& IOS Outlines}
+\author{Getting Started}
+\date{}
+\titlepic{\includegraphics[width=0.7\linewidth]{C:/Users/HP/Downloads/logo}} 
+
+\begin{document}
+	\includepdf[pages=1,fitpaper]{C:/Users/HP/Downloads/swift}
+	\setlength{\baselineskip}{25 pt}
+
+
+    \maketitle 
+    \newpage
+	
+	\tableofcontents
+	\newpage
+	% Here is the part of the .tex file that you have to worry about!
+\section{Introduction}
+Swift Programming Language
+
+\begin{itemize}
+	\item Data Types, Constants, and Variables
+	\item Operators and Expressions
+	\item Object-oriented programming in Swift
+	\item An Introduction to Swift Sub-classing and Extensions
+	\item Working with Array and Dictionary Collections in Swift
+	\item Understanding Error Handling in Swift
+	\item Protocols
+	\item Functions
+\end{itemize}
+
+like:
+\begin{lstlisting}[language=python]
+	
+	func greet(person: String) -> String { 
+		
+ 	  let greeting = "Hello, " + person + "!"
+	  return greeting
+	
+	}
+	
+\end{lstlisting}
+
+	
+\section{Views, Layouts,and Storyboards}
+\begin{itemize}
+	\item An Introduction to Auto Layout in iOS Implementing iOS Auto LayoutConstraints in Code
+	\item Understanding the iOS Auto Layout
+	\item VisualFormat Language
+	\item Using Storyboards in Xcode
+	\item Using Xcode Storyboards to Create an iOS Tab Bar Application
+	\item Working with the iOS Stack View Class
+	\item Implementing a Page based iOS Application using UIPageViewController
+	\item Navigation Controllers
+	\item Table Views
+	\item Collection Views
+	\item Tab Bars and Toolbars
+	\item Creating Views That Scroll
+	\item Popovers and Modal Views
+\end{itemize}
+
+\section{Data Storagewith Files and Databases}
+\begin{itemize}
+	\item Working with Directories
+	\item Working with Files
+	\item Managing Files using the iOS UIDocument Class
+	\item Working with iOS Databases using Core Data
+\end{itemize}
+
+\section{Touch, Taps, and Gestures}
+\begin{itemize}
+	\item Multitouch, Taps and Gestures
+	\item Detecting iOS Touch ScreenGesture Motions
+	\item Identifying Gesturesusing iOS	GestureRecognizers
+\end{itemize}
+
+\section{Consuming RESTfulJSON Web Services}
+\begin{itemize}
+	\item Types of Web Services
+	\item Pods \& AlamoFire
+\end{itemize}
+
+\section{Extensions}
+\begin{itemize}
+	\item An Extension Widget
+	\item Creating an iOS Photo EditingExtension
+	\item Creating an iOS Action Extension
+	\item Receiving Data from an iOS Action Extension
+\end{itemize}
+
+\section{Multimedia}
+\begin{itemize}
+	\item Accessing the iOS Camera and Photo Library
+	\item iOS Video Playback using AVPlayer and
+	AVPlayerViewController
+	\item Playing Audio on iOS using AVAudioPlayer
+	\item Recording Audio on iOS with AVAudioRecorder
+\end{itemize}
+
+\section{Location}
+\begin{itemize}
+	\item Permissions \& Accuracy
+	\item Receiving LocationUpdates
+	\item Geocoding and Reverse Geocoding
+	\item Obtaining CompassHeadings
+\end{itemize}
+
+\section{Map Kit}
+\begin{itemize}
+	\item Adding Annotations
+	\item Accessory Views
+	\item Routing with MapKit and Core Location
+\end{itemize}
+
+\section{Design Patterns}
+\begin{itemize}
+	\item Singleton
+	\item MVVM \& MVC \& MVP \& VIPER
+\end{itemize}
+
+\section{Data management}
+\begin{itemize}
+	\item Importance of data management
+	\item Types of management functions
+	\item Tools and techniques
+	\item tasks and roles
+\end{itemize}
+
+\section{Unit testing \& UI testing}
+\begin{itemize}
+	\item Creating a Unit Test Target
+	\item Using XCTAssert to Test Models
+	\item Writing Your First Test
+	\item Debugging a Tes
+	\item Failing Conditionally
+	\item Faking Objects and Interactions
+	\item Faking Input From Stub
+	\item Testing Performance
+	\item Enabling Code Coverage
+\end{itemize}
+
+\section{Different topics}
+\begin{itemize}
+	\item ARKit introduction
+	\item Dependency injection
+	\item Objective-C generalknowledge
+\end{itemize}
+
+\section{The App Store}
+\begin{itemize}
+	\item Creating an Application Profile
+	\item Preparing and Uploading the Application Binary
+	\item Submitting the App for Review
+\end{itemize}
+
+
+\section{Functions}
+
+
+
+\subsection{Defining Functions}
+\begin{lstlisting}[language=python]
+func functionName(parameters) -> returnType { 
+	//functionBody 
+  }
+
+func greet(person: String) -> String { 
+	let greeting = "Hello, " + person + "!"
+	return greeting
+  }
+	
+\end{lstlisting}
+
+
+
+\subsection{Calling Functions}
+\begin{lstlisting}[language=python]
+ print(greet(person: "Anna")) 
+   // Prints "Hello, Anna!"
+ print(greet(person: "Brian")) 
+   // Prints "Hello, Brian!"
+	
+\end{lstlisting}
+
+\subsection{Functions Without Parameters}
+\begin{lstlisting}[language=python]
+  func sayHello() -> String { 
+	return "hello, world"
+  } 
+	
+  print(sayHello()) 
+    // Prints "hello, world"
+\end{lstlisting}
+
+
+\subsection{Functions With Multiple Parameters}
+\begin{lstlisting}[language=python]
+func greet(person: String, alreadyGreeted: Bool) -> String { 
+	if alreadyGreeted { 
+		return greetAgain(person: person) 
+	} else { 
+		return greet(person: person) 
+  }  
+} 	
+print(greet(person: "Tim", alreadyGreeted: true)) 
+// Prints "Hello again, Tim!"
+\end{lstlisting}
+
+
+\subsection{Functions Without Return Values}
+\begin{lstlisting}[language=python]
+func greet(person: String) { 
+	print("Hello, \(person)!") 	
+} 
+greet(person: "Dave") 
+  // Prints "Hello, Dave!"
+\end{lstlisting}
+
+
+\subsection{Functions with Multiple Return Values}
+\begin{lstlisting}[language=python]
+func minMax(array: [Int]) -> (min: Int, max: Int) { 
+	var currentMin = array[0] 
+	var currentMax = array[0] 
+	for value in array[1..<array.count] { 
+		if value < currentMin { 
+			currentMin = value
+		} else if value > currentMax { 
+			currentMax = value
+	} 	
+  } 
+		
+	return (currentMin, currentMax) 
+}
+\end{lstlisting}
+
+
+\subsection{Functions With an Implicit Return}
+\begin{lstlisting}[language=python]
+func greeting(for person: String) -> String { 
+	"Hello, " + person + "!"
+}
+print(greeting(for: "Dave")) 
+  // Prints "Hello, Dave!"
+\end{lstlisting}
+
+\subsection{Function Argument Labels and Parameter Names}
+\begin{lstlisting}[language=python]
+func sum(x: Int, y: Int) { 
+	// In the function body, x and y
+	// refer to the argument values
+} 
+sum(x: 1, y: 2)
+\end{lstlisting}
+
+\subsection{Specifying Argument Labels}
+\begin{lstlisting}[language=python]
+func greet(person: String, from hometown: String) -> String { 
+	return "Hello \(person)! Glad you could visit from \(hometown)."	
+}
+print(greet(person: "Bill", from: "Cupertino"))
+\end{lstlisting}
+
+\subsection{Variadic Parameters}
+\begin{lstlisting}[language=python]
+func arithmeticMean(_ numbers: Double...) -> Double { 
+	var total: Double = 0
+	for number in numbers { 
+		total += number
+	} 
+	return total / Double(numbers.count) 
+}
+arithmeticMean(1, 2, 3, 4, 5) 
+  // returns 3.0, which is the arithmetic mean of these five numbers
+arithmeticMean(3, 8.25, 18.75) 
+  // returns 10.0, which is the arithmetic mean of these three numbers
+\end{lstlisting}
+
+\subsection{In-Out Parameters}
+\begin{lstlisting}[language=python]
+func swapTwoInts(_ x: inout Int, _ y: inout Int) { 
+	let temporary = x
+	x = y
+	y = temporary
+}
+	var a = 10
+	var b = 20
+	swapTwoInts(&a, &b) 
+print("a is now \(a), and b is now \(b)") 
+\end{lstlisting}
+
+
+
+\begin{figure}
+	\section{Install Xcode}	
+	\centering
+	\includegraphics[width=1\linewidth]{C:/Users/HP/OneDrive/Desktop/R}
+	\caption{Once you have Xcode installed, you should see the following welcome dialog:}
+	\label{fig:r}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{C:/Users/HP/OneDrive/Desktop/name}
+	\caption{Choose a project name}
+	\label{fig:name}
+\end{figure}
+\begin{figure}
+	\section{Creating an Xcode Project}
+	\centering
+	\includegraphics[width=0.8\linewidth]{C:/Users/HP/OneDrive/Desktop/ss}
+	\caption{Different Elements of the Playground}
+	\label{fig:ss}
+\end{figure}
+
+\begin{figure}
+	\section{Different Elements of the Playground}
+	\centering
+	\includegraphics[width=0.8\linewidth]{C:/Users/HP/OneDrive/Desktop/kit}
+	\caption{Code editor : this is where you’re going to be typing your Swift code.}
+	\label{fig:kit}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{C:/Users/HP/OneDrive/Desktop/read}
+	\caption{Status bar : tells you the current status of the playground.}
+	\label{fig:read}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{C:/Users/HP/OneDrive/Desktop/d}
+	\caption{Show/Hide Debug : allows you to hide or show the debug or console.}
+	\label{fig:d}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{C:/Users/HP/OneDrive/Desktop/run}
+	\caption{Execute Playground : runs all the code in your playground.}
+	\label{fig:run}
+\end{figure}
+
+\begin{figure}
+	\section{It's Ready}
+	\centering
+	\includegraphics[width=0.8\linewidth]{C:/Users/HP/OneDrive/Desktop/code}
+	\caption{xcode Ready to run your own project, Enjoy coding :)}
+	\label{fig:code}
+\end{figure}
+
+
+
+\end{document}	
